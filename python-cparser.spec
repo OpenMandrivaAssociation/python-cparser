@@ -4,7 +4,7 @@
 Summary:	C parser in Python
 Name:		python-%{module}
 Version:	2.14
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Python
 Url:		https://github.com/eliben/pycparser
