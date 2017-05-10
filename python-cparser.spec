@@ -3,12 +3,12 @@
 
 Summary:	C parser in Python
 Name:		python-%{module}
-Version:	2.14
-Release:	2
+Version:	2.17
+Release:	1
 License:	BSD
 Group:		Development/Python
 Url:		https://github.com/eliben/pycparser
-Source0:	http://pypi.python.org/packages/source/p/%{oname}/%{oname}-%{version}.tar.gz
+Source0:	https://github.com/eliben/pycparser/archive/release_v%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python2-setuptools
 
@@ -49,7 +49,7 @@ as a front-end for C compilers or analysis tools.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -qn %{oname}-%{version}
+%setup -qn %{oname}-release_v%{version}
 perl -i -pe 's/\r\n/\n/gs' LICENSE
 
 cp -a . %{py2dir}
