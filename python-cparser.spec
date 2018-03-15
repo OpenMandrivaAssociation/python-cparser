@@ -23,10 +23,8 @@ as a front-end for C compilers or analysis tools.
 
 %files
 %doc CHANGES LICENSE README.rst
-%{py_puresitedir}/pycparser/*.py*
-%{py_puresitedir}/pycparser/ply/*.py*
+%{py_puresitedir}/pycparser
 %{py_puresitedir}/pycparser*.egg-info
-%{py_puresitedir}/pycparser/_c_ast.cfg
 
 #----------------------------------------------------------------------------
 
@@ -41,10 +39,8 @@ as a front-end for C compilers or analysis tools.
 
 %files -n python2-%{module}
 %doc CHANGES LICENSE README.rst
-%{py2_puresitedir}/pycparser/*.py*
-%{py2_puresitedir}/pycparser/ply/*.py*
+%{py2_puresitedir}/pycparser
 %{py2_puresitedir}/pycparser*.egg-info
-%{py2_puresitedir}/pycparser/_c_ast.cfg
 
 #----------------------------------------------------------------------------
 
