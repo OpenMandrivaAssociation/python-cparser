@@ -15,6 +15,7 @@ BuildRequires:	python2dist(ply)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python-setuptools
 BuildRequires:	python3dist(ply)
+BuildRequires:	dos2unix
 Requires:	python3dist(ply)
 BuildArch:	noarch
 
@@ -49,7 +50,7 @@ as a front-end for C compilers or analysis tools.
 
 %prep
 %autosetup -n %{oname}-release_v%{version} -p1
-sed -i -e 's/\r\n/\n/gs' LICENSE
+dos2unix LICENSE
 
 cp -a . %{py2dir}
 
