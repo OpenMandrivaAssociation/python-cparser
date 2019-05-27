@@ -3,12 +3,12 @@
 
 Summary:	C parser in Python
 Name:		python-%{module}
-Version:	2.18
-Release:	3
+Version:	2.19
+Release:	1
 License:	BSD
 Group:		Development/Python
 Url:		https://github.com/eliben/pycparser
-Source0:	https://github.com/eliben/pycparser/archive/release_v%{version}.tar.gz
+Source0:	https://github.com/eliben/pycparser/archive/%{oname}-release_v%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python2-setuptools
 BuildRequires:	python2dist(ply)
@@ -48,21 +48,21 @@ as a front-end for C compilers or analysis tools.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -qn %{oname}-release_v%{version}
-perl -i -pe 's/\r\n/\n/gs' LICENSE
+%autosetup -n %{oname}-release_v%{version} -p1
+sed -i -e 's/\r\n/\n/gs' LICENSE
 
 cp -a . %{py2dir}
 
 %build
-pushd %{py2dir}
+cd %{py2dir}
 %{__python2} setup.py build
-popd
+cd -
 
 %{__python} setup.py build
 
 %install
-pushd %{py2dir}
+cd %{py2dir}
 %{__python2} setup.py install --root=%{buildroot} --install-purelib=%{py2_puresitedir}
-popd
+cd -
 
 %{__python} setup.py install --root=%{buildroot} --install-purelib=%{py_puresitedir}
