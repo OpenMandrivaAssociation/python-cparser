@@ -3,17 +3,17 @@
 
 Summary:	C parser in Python
 Name:		python-%{module}
-Version:	2.20
-Release:	3
+Version:	2.21
+Release:	1
 License:	BSD
 Group:		Development/Python
 Url:		https://github.com/eliben/pycparser
-Source0:	https://github.com/eliben/pycparser/archive/%{oname}-release_v%{version}.tar.gz
+Source0:	https://github.com/eliben/pycparser/archive/refs/tags/release_v%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python-setuptools
-BuildRequires:	python3dist(ply)
+BuildRequires:	python%{pyver}dist(ply)
 BuildRequires:	dos2unix
-Requires:	python3dist(ply)
+Requires:	python%{pyver}dist(ply)
 BuildArch:	noarch
 
 %description
