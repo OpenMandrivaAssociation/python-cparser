@@ -3,7 +3,7 @@
 
 Summary:	C parser in Python
 Name:		python-%{module}
-Version:	2.21
+Version:	2.23
 Release:	1
 License:	BSD
 Group:		Development/Python
